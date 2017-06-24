@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <form id="myform">
+        <input type="text" name="userName" value='admin'>
+        <input type="password" name="usrePwd" id="usrePwd" value=123456>
+        <input type="submit" value="提交">
+    </form>
+    <script>
+        // window.addEventListener('submit', form, function (e) {
+        //     console.log(e);
+        //     return false;
+        // })
+        document.querySelector('#myform').onsubmit = function () {
+            var formobj = document.getElementById("myform");
+            var formdata = new FormData(formobj);
+            var a = new FormData(1);
+            console.log(formobj);
+            console.log(formdata);
+            console.log(a);
+            return false;
+        }
+
+
+        // form.onsubmit = function (e) {
+        //     console.log(e);
+        //     var form = document.querySelector('form')
+        //     var formData = new FormData(form);
+        //     console.log(formData);
+        //     return false;
+        // }
+        // var formElement = document.getElementById("registerForm");
+        // var form = document.forms['myform'];
+        // var usrePwd = form.elements['usrePwd'].value
+        // console.log(usrePwd);
+    </script>
+</body>
+
+</html>

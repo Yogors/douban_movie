@@ -1,0 +1,22 @@
+<div class="list" ng-show="!isShow">
+    <ul>
+        <li ng-repeat="item in onplayLists.subjects">
+            <a href="#/details/{{item.id}}">
+                        <img ng-src="{{item.images.large}}" alt="">
+                    </a>
+            <div class="meta">
+                <h4><span>{{item.title}}</span> <em>{{item.rating.average}}</em></h4>
+                <div class="otherinfo">类型:<span ng-repeat="type in item.genres">{{type}}</span></div>
+            </div>
+        </li>
+    </ul>
+    <div class="paging">
+        <label>总共：{{onplayLists.total}}条记录,第{{startIndex}}/{{totalPage}}页;</label>
+        <!-- 加上disable类样式，表示按钮禁用状态 -->
+        <button class="prev" ng-class="{disable:startIndex==1}" ng-click="getClick(startIndex-1)">上一页</button>
+        <button class="next" ng-class="{disable:startIndex==totalPage}" ng-click="getClick(startIndex+1)">下一页</button>
+    </div>
+</div>
+<div class="loading" ng-show="isShow">
+    <img src="assets/img/loading.gif" alt="">
+</div>
