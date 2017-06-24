@@ -24,15 +24,14 @@
             <ul>
                 <!--li中添加 active 类样式，显示焦点状态。-->
                 <li class="active" hm-active><a href="#/home">首页</a></li>
-                <li hm-active><a href="#/onplay/1">正在热映</a></li>
-                <li hm-active><a href="#/willplay/1">即将上映</a></li>
+                <li hm-active><a href="#/in_theaters/1">正在热映</a></li>
+                <li hm-active><a href="#/coming_soon/1">即将上映</a></li>
                 <li hm-active><a href="#/top250/1">Top250</a></li>
             </ul>
         </nav>
     </div>
     <!-- 顶部导航栏结束 -->
     <div class="container" ng-view>
-
 
     </div>
     <footer class="footer">
@@ -44,10 +43,8 @@
     <script src="../node_modules/angular/angular.min.js"></script>
     <script src="../node_modules/angular-route/angular-route.min.js"></script>
     <script type="text/javascript" src="service/service.js"></script>
-    <script type="text/javascript" src="./onplay/onplay.js"></script>
     <script type="text/javascript" src="details/details.js"></script>
-    <script type="text/javascript" src="willplay/willplay.js"></script>
-    <script type="text/javascript" src="top250/top250.js"></script>
+    <script type="text/javascript" src="movie_list/movie_list.js"></script>
     <script src="./home/home.js"></script>
     <script src="app.js"></script>
 </body>

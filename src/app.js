@@ -1,6 +1,6 @@
 //主js文件
 (function (angular) {
-    var app = angular.module('movieCat', ['moviecat.home', 'moviecat.onplay', 'detailApp', 'moviecat.willplay', 'moviecat.top250']);
+    var app = angular.module('movieCat', ['moviecat.home', 'detailApp', 'moviecat.movie_list']);
     app.config(["$locationProvider", function ($locationProvider) {
         $locationProvider.hashPrefix('');
     }]);
